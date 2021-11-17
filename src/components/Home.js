@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Paper } from '@material-ui/core';
 import { firebaseAuthentication } from '../config/firebase';
 import Button from '@mui/material/Button';
+import Tmdb from './tmdb/Tmdb';
 
 export default class Home extends Component {
     componentDidMount() {
@@ -18,12 +19,15 @@ export default class Home extends Component {
 
     render() {
         return(
+          <>
             <Container>
                 <Paper>
                     <Button variant="outlined" onClick={this.handleLogOut}>Logout</Button>
                     <h1>Selamat Datang Bro</h1>
                 </Paper>
             </Container>
+            <Tmdb />
+          </>
         )
     }
 }
